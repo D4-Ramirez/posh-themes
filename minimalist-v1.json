@@ -14,7 +14,7 @@
           "type": "path"
         },
         {
-          "foreground": "#AB00FF",
+          "foreground": "#cc65ff",
           "properties": {
             "prefix": "[",
             "postfix": "] ",
