@@ -1,28 +1,53 @@
 {
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
-      "type": "prompt",
       "alignment": "left",
+      "horizontal_offset": 0,
+      "vertical_offset": 0,
       "segments": [
         {
-          "type": "path",
-          "style": "plain",
-          "foreground": "cyan",
+          "foreground": "#00a2ff",
           "properties": {
             "prefix": "",
             "style": "folder"
-          }
+          },
+          "style": "plain",
+          "type": "path"
         },
         {
-          "type": "text",
-          "style": "plain",
+          "foreground": "#fee761",
+          "properties": {
+            "prefix": "<#ffffff>on </>",
+            "color_background": false,
+            "branch_icon": "",
+            "display_stash_count": true,
+            "display_upstream_icon": true,
+            "status_colors_enabled": true,
+            "local_changes_color": "#F7A0FF",
+            "ahead_and_behind_color": "lightMagenta",
+            "behind_color": "#F7A0FF",
+            "ahead_color": "lightGreen",
+            "stash_count_icon": "\uF692 "
+          },
+          "style": "powerline",
+          "type": "git"
+        },
+        {
           "foreground": "lightGreen",
           "properties": {
-            "prefix": "",
-            "text": "\u276F"
-          }
+            "always_enabled": true,
+            "color_foreground": true,
+            "display_exit_code": false,
+            "error_color": "lightMagenta",
+            "prefix": "\u276F"
+          },
+          "style": "plain",
+          "type": "exit"
         }
-      ]
+      ],
+      "type": "prompt"
     }
-  ]
+  ],
+  "final_space": true
 }
