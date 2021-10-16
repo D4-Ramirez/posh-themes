@@ -3,11 +3,9 @@
   "blocks": [
     {
       "alignment": "left",
-      "horizontal_offset": 0,
-      "vertical_offset": 0,
       "segments": [
         {
-          "foreground": "#00a2ff",
+          "foreground": "#ffffff",
           "properties": {
             "prefix": "",
             "style": "folder"
@@ -18,16 +16,17 @@
         {
           "foreground": "#fee761",
           "properties": {
-            "prefix": "<#ffffff>on </>",
+            "prefix": "[",
+            "postfix": "] ",
             "color_background": false,
             "branch_icon": "",
             "display_stash_count": true,
             "display_upstream_icon": true,
             "status_colors_enabled": true,
-            "local_changes_color": "#F7A0FF",
-            "ahead_and_behind_color": "lightMagenta",
-            "behind_color": "#F7A0FF",
-            "ahead_color": "lightGreen",
+            "local_changes_color": "#71E2FF",
+            "ahead_and_behind_color": "#FB71FF",
+            "behind_color": "#71E2FF",
+            "ahead_color": "#71FF93",
             "stash_count_icon": "\uF692 "
           },
           "style": "powerline",
