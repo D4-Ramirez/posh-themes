@@ -14,7 +14,7 @@
           "type": "path"
         },
         {
-          "foreground": "#ffffff",
+          "foreground": "#71E2FF",
           "properties": {
             "prefix": "[",
             "postfix": "] ",
@@ -23,9 +23,9 @@
             "display_stash_count": true,
             "display_upstream_icon": true,
             "status_colors_enabled": true,
-            "local_changes_color": "#71E2FF",
+            "local_changes_color": "#FFD271",
             "ahead_and_behind_color": "#FB71FF",
-            "behind_color": "#71E2FF",
+            "behind_color": "#FFD271",
             "ahead_color": "#71FF93",
             "stash_count_icon": "\uF692 "
           },
