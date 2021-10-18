@@ -23,9 +23,9 @@
             "display_stash_count": true,
             "display_upstream_icon": true,
             "status_colors_enabled": true,
-            "local_changes_color": "#FFD271",
+            "local_changes_color": "#A49EFF",
             "ahead_and_behind_color": "#FB71FF",
-            "behind_color": "#FFD271",
+            "behind_color": "#A49EFF",
             "ahead_color": "#71FF93",
             "stash_count_icon": "\uF692 "
           },
