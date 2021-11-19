@@ -20,14 +20,14 @@
             "postfix": "] ",
             "color_background": false,
             "branch_icon": "",
-            "display_stash_count": true,
-            "display_upstream_icon": true,
+            "display_stash_count": false,
+            "display_upstream_icon": false,
             "status_colors_enabled": true,
             "local_changes_color": "#A49EFF",
             "ahead_and_behind_color": "#FB71FF",
             "behind_color": "#A49EFF",
             "ahead_color": "#71FF93",
-            "stash_count_icon": "\uF692 "
+            "stash_count_icon": ""
           },
           "style": "powerline",
           "type": "git"
