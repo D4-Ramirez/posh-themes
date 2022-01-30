@@ -16,18 +16,15 @@
         {
           "foreground": "#71E2FF",
           "properties": {
-            "prefix": "[",
-            "postfix": "] ",
             "color_background": false,
-            "branch_icon": "",
-            "display_stash_count": true,
-            "display_upstream_icon": true,
             "status_colors_enabled": true,
+            "github_icon": "",
+            "branch_icon": "",
+            "prefix": "[",
             "local_changes_color": "#A49EFF",
-            "ahead_and_behind_color": "#FB71FF",
-            "behind_color": "#A49EFF",
+            "behind_color": "#FB71FF",
             "ahead_color": "#71FF93",
-            "stash_count_icon": "\uF692 "
+            "postfix": "] "
           },
           "style": "powerline",
           "type": "git"
