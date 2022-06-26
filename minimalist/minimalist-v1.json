@@ -7,43 +7,44 @@
         {
           "foreground": "#ffffff",
           "properties": {
-            "prefix": "",
             "style": "folder"
           },
           "style": "plain",
+          "template": "{{ .Path }} ",
           "type": "path"
         },
         {
           "foreground": "#71E2FF",
+          "foreground_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#A49EFF{{ end }}",
+            "{{ if gt .Ahead 0 }}#FB71FF{{ end }}",
+            "{{ if gt .Behind 0 }}#71FF93{{ end }}"
+          ],
           "properties": {
-            "color_background": false,
-            "status_colors_enabled": true,
-            "github_icon": "",
             "branch_icon": "",
-            "prefix": "[",
-            "local_changes_color": "#A49EFF",
-            "behind_color": "#FB71FF",
-            "ahead_color": "#71FF93",
-            "postfix": "] "
+            "github_icon": ""
           },
           "style": "powerline",
+          "template": "[{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }}] ",
           "type": "git"
         },
         {
           "foreground": "lightGreen",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}lightMagenta{{ end }}"
+          ],
           "properties": {
             "always_enabled": true,
-            "color_foreground": true,
-            "display_exit_code": false,
-            "error_color": "lightMagenta",
-            "prefix": "\u276F"
+            "color_foreground": true
           },
           "style": "plain",
+          "template": "\u276f{{ if gt .Code 0 }}\uf00d{{ else }}\uf42e{{ end }}",
           "type": "exit"
         }
       ],
       "type": "prompt"
     }
   ],
-  "final_space": true
+  "final_space": true,
+  "version": 2
 }
