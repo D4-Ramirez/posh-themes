@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version: 3
+final_space: true
+
+palette:
+  background: "#161821"
+  background_alt: "#1E2132"
+  blue: "#84A0C6"
+  cyan: "#89B8C2"
+  foreground: "#C6C8D1"
+  green: "#B4BE82"
+  orange: "#E2A478"
+  purple: "#A093C7"
+  red: "#E27878"
+
+blocks:
+  - type: rprompt
+    overflow: hidden
+    segments:
+      - type: executiontime
+        style: plain
+        foreground: p:cyan
+        background: transparent
+        template: "{{ .FormattedMs }}"
+        properties:
+          threshold: 5000
+          style: austin
+
+  - type: prompt
+    alignment: left
+    segments:
+      - type: session
+        style: diamond
+        foreground: p:blue
+        background: p:background_alt
+        template: "\ue2a6 {{ .UserName }} " 
+        leading_diamond: 
+        powerline_symbol: 
+  
+      - type: path
+        style: powerline
+        powerline_symbol: 
+        foreground: p:background
+        background: p:blue
+        template: " \ue5fe {{ .Path }} "
+        properties: 
+          style: folder
+
+      - type: git
+        style: powerline
+        template: " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} {{ if gt .Behind 0}}{{ end }}{{ if gt .Ahead 0}}{{ end }}"
+        foreground: p:background
+        background: p:foreground
+        powerline_symbol: 
+        properties: 
+          branch_icon: "\ue725 "
+          commit_icon: "@"
+          fetch_status: true
+
+  - type: prompt
+    alignment: left
+    newline: true
+    segments:
+      - type: text
+        style: plain
+        foreground_templates:
+          - "{{ if gt .Code 0 }}p:purple{{ end }}"
+          - "{{ if eq .Code 0 }}p:blue{{ end }}"
+        background: transparent 
+        template: "❯"
+
+transient_prompt:
+  background: transparent
+  foreground_templates:
+    - "{{ if gt .Code 0 }}p:purple{{ end }}"
+    - "{{ if eq .Code 0 }}p:blue{{ end }}"
+  template: "❯ "
+
+secondary_prompt:
+  background: transparent
+  foreground: p:blue
+  tamplate: "❯❯ "
+
